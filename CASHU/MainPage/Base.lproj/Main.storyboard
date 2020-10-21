@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainPageViewController" id="BYZ-38-t0r" customClass="MainPageViewController" customModule="CASHU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lx6-XR-Tjo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoV-vR-ofu" customClass="RoundedCornerButton" customModule="CASHU" customModuleProvider="target">
+                                <rect key="frame" x="157" y="76" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="lKn-nk-MXd"/>
+                                    <constraint firstAttribute="height" constant="30" id="lNb-RG-4mD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <state key="normal" title="Above">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showAboveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R0x-Rd-C1w"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5x-yk-I0m" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Tvj-kA-Pun"/>
+                                    <constraint firstAttribute="width" constant="60" id="eFu-fh-6BD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.0" green="0.80392156859999997" blue="0.48627450979999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="dCx-xU-U5p">
+                                <rect key="frame" x="94.5" y="335.5" width="225" height="225"/>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I5x-yk-I0m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="51L-JF-87l"/>
+                            <constraint firstItem="NoV-vR-ofu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="9eV-Wb-R9C"/>
+                            <constraint firstItem="dCx-xU-U5p" firstAttribute="height" secondItem="Lx6-XR-Tjo" secondAttribute="height" multiplier="0.275061" id="AsW-nD-q72"/>
+                            <constraint firstItem="I5x-yk-I0m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CAb-qs-xgv"/>
+                            <constraint firstItem="dCx-xU-U5p" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HCu-sZ-PZX"/>
+                            <constraint firstItem="Lx6-XR-Tjo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M4Y-Bp-1tf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lx6-XR-Tjo" secondAttribute="trailing" id="hbu-um-BmO"/>
+                            <constraint firstItem="Lx6-XR-Tjo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kbt-Pa-7b7"/>
+                            <constraint firstItem="dCx-xU-U5p" firstAttribute="width" secondItem="Lx6-XR-Tjo" secondAttribute="width" multiplier="0.543478" id="nkb-tW-FN1"/>
+                            <constraint firstItem="NoV-vR-ofu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oiw-RX-NRQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lx6-XR-Tjo" secondAttribute="bottom" id="sC7-xd-hxX"/>
+                            <constraint firstItem="dCx-xU-U5p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whB-A2-yLM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboveButton" destination="NoV-vR-ofu" id="IRd-fy-Sad"/>
+                        <outlet property="loaderView" destination="I5x-yk-I0m" id="ftJ-Nf-UWo"/>
+                        <outlet property="noDataImage" destination="dCx-xU-U5p" id="jcI-1D-fUh"/>
+                        <outlet property="productsTableview" destination="Lx6-XR-Tjo" id="WLp-aK-uNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="images" width="225" height="225"/>
+    </resources>
+</document>
